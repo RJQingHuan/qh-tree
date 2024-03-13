@@ -56,4 +56,4 @@ function handleToggleExpanded(data: DataTreeOption) {
 
 <style lang="scss">
 @import './tree';
-</style>...
+</style>
