@@ -1,0 +1,43 @@
+{
+  "name": "qh-tree",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev:h5": "npm -C example run dev:h5",
+    "lint": "eslint .",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.8.1",
+    "@dcloudio/types": "^3.4.8",
+    "@types/node": "^20.11.26",
+    "eslint": "^8.57.0",
+    "lint-staged": "^15.2.2",
+    "sass": "^1.71.1",
+    "simple-git-hooks": "^2.10.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-order": "^6.0.4",
+    "typescript": "^5.4.2",
+    "vue-tsc": "^2.0.6"
+  },
+  "dependencies": {
+    "vue": "3.2.47"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix",
+    "*.{scss,css,vue}": "stylelint  --fix --allow-empty-input"
+  }
+}
