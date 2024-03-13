@@ -1,10 +1,12 @@
 {
   "name": "qh-tree",
+  "displayName": "uni-app树形组件,树选择器",
   "version": "1.0.0",
+  "description": "uni-app树形组件,树选择器",
   "license": "MIT",
   "homepage": "https://github.com/RJQingHuan/qh-tree",
-  "bugs": "https://github.com/RJQingHuan/qh-tree/issues",
   "repository": "https://github.com/RJQingHuan/qh-tree.git",
+  "bugs": "https://github.com/RJQingHuan/qh-tree/issues",
   "keywords": [
     "uni-app",
     "树",
@@ -12,15 +14,26 @@
     "vue3",
     "components"
   ],
-  "displayName": "uni-app树形组件,树选择器",
-  "description": "uni-app树形组件,树选择器",
+  "sideEffects": [
+    "*.scss",
+    "*/components/**/*.vue"
+  ],
   "exports": {
+    ".": {
+      "types": "./dist/index.d.ts"
+    },
     "./*": "./*"
   },
+  "types": "./dist/index.d.ts",
   "files": [
     "README.md",
-    "components"
+    "components",
+    "dist"
   ],
+  "scripts": {
+    "unbuild": "unbuild",
+    "stub": "unbuild --stub"
+  },
   "peerDependencies": {
     "vue": "3.2.47"
   }

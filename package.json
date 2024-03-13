@@ -1,22 +1,28 @@
 {
   "name": "qh-tree",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev:h5": "npm -C example run dev:h5",
     "lint": "eslint .",
     "postinstall": "npx simple-git-hooks",
-    "publish:ci": "esno scripts/publish.ts"
+    "publish:ci": "esno scripts/publish.ts",
+    "lint-staged": "npx lint-staged"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=18"
+  "dependencies": {
+    "vue": "3.2.47"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.1",
     "@dcloudio/types": "^3.4.8",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.26",
+    "@unocss/eslint-config": "^0.58.5",
     "consola": "^3.2.3",
     "eslint": "^8.57.0",
     "esno": "^4.7.0",
@@ -33,10 +39,8 @@
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.4",
     "typescript": "^5.4.2",
+    "unbuild": "^2.0.0",
     "vue-tsc": "^2.0.6"
-  },
-  "dependencies": {
-    "vue": "3.2.47"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

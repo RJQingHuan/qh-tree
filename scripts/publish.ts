@@ -1,7 +1,7 @@
-import { execSync } from "child_process";
+import { execSync } from 'node:child_process'
 import { consola } from 'consola'
-import { version } from '../package.json'
 import fs from 'fs-extra'
+import { version } from '../package.json'
 
 fs.copyFileSync('README.md', 'packages/qh-tree/README.md')
 

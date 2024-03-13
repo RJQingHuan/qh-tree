@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'node:url'
+import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import UniPages from '@uni-helper/vite-plugin-uni-pages'
 import uni from '@dcloudio/vite-plugin-uni'
@@ -8,8 +8,8 @@ import UniManifest from '@uni-helper/vite-plugin-uni-manifest'
 export default defineConfig({
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
   },
   plugins: [
     UniPages(),

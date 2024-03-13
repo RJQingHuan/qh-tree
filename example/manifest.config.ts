@@ -70,8 +70,6 @@ export default defineManifestConfig({
     usingComponents: true,
   },
   'h5': {
-    darkmode: true,
-    themeLocation: 'theme.json',
   },
   'uniStatistics': {
     enable: false,
