@@ -3,14 +3,15 @@ import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages'
 export default defineUniPages({
   pages: [],
   globalStyle: {
-    backgroundColor: '@bgColor',
-    backgroundColorBottom: '@bgColorBottom',
-    backgroundColorTop: '@bgColorTop',
-    backgroundTextStyle: '@bgTxtStyle',
-    navigationBarBackgroundColor: '#000000',
-    navigationBarTextStyle: '@navTxtStyle',
-    navigationBarTitleText: 'Uni Creator',
-    navigationStyle: 'custom',
+    backgroundColor: '#FFFFFF',
+    backgroundColorBottom: '#FFFFFF',
+    backgroundColorTop: '#FFFFFF',
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#FFFFFF',
+    navigationBarTextStyle: 'black',
+    navigationBarTitleText: 'qh-tree',
+    usingComponents: {
+      'qh-tree-item': 'node-modules/qh-tree/components/qh-tree-item/qh-tree-item',
+    },
   },
-  subPackages: [],
 })

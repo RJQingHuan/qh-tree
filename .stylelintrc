@@ -39,7 +39,8 @@
     ],
     "no-descending-specificity": null,
     "no-empty-source": null,
-    "keyframes-name-pattern": "^[a-z]+([A-Z][a-z]*)*$"
+    "keyframes-name-pattern": "^[a-z]+([A-Z][a-z]*)*$",
+    "unit-no-unknown": null
   },
   "ignoreFiles": [
     "node_modules",

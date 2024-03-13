@@ -1,0 +1,48 @@
+$text-color: #606266;
+$text-size: 30rpx;
+
+.qh-tree-item {
+  width: 100%;
+  font-size: $text-size;
+  color: $text-color;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__expand-icon {
+    padding-right: 8rpx;
+    color: #a8abb2;
+    transition: transform .4s;
+
+    &.is-leaf {
+      color: transparent;
+      cursor: default;
+      visibility: hidden;
+    }
+
+    &.is-expanded {
+      transform: rotate(90deg);
+    }
+
+    image {
+      width: 16rpx;
+      height: 21rpx;
+    }
+  }
+
+  &__label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__children {
+    padding-left: 20rpx;
+    overflow: hidden;
+    transition: height .4s;
+  }
+}

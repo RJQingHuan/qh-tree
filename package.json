@@ -9,7 +9,10 @@
   },
   "scripts": {
     "dev:h5": "npm -C example run dev:h5",
+    "dev:app": "npm -C example run dev:app",
+    "dev:mp-weixin": "npm -C example run dev:mp-weixin",
     "lint": "eslint .",
+    "lint:style": "stylelint --cache \"**/*.{vue,scss}\" --fix",
     "postinstall": "npx simple-git-hooks",
     "publish:ci": "esno scripts/publish.ts",
     "lint-staged": "npx lint-staged"
