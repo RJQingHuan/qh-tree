@@ -5,7 +5,8 @@
   "scripts": {
     "dev:h5": "npm -C example run dev:h5",
     "lint": "eslint .",
-    "postinstall": "npx simple-git-hooks"
+    "postinstall": "npx simple-git-hooks",
+    "publish:ci": "esno scripts/publish.ts"
   },
   "license": "MIT",
   "engines": {
@@ -14,8 +15,12 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.1",
     "@dcloudio/types": "^3.4.8",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.26",
+    "consola": "^3.2.3",
     "eslint": "^8.57.0",
+    "esno": "^4.7.0",
+    "fs-extra": "^11.2.0",
     "lint-staged": "^15.2.2",
     "sass": "^1.71.1",
     "simple-git-hooks": "^2.10.0",
