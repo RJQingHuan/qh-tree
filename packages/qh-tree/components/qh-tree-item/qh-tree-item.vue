@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, inject } from 'vue'
-import { QhTreeConfigKey } from '../qh-tree'
+import { DefaultItemHeight, QhTreeConfigKey } from '../qh-tree'
 import type { DataTreeOption } from '../qh-tree'
 
 const props = defineProps<{
@@ -29,13 +29,13 @@ const childrenHeight = computed(() => {
     })
   }
   travel(props.data.children)
-  return num * (treeConfig?.itemHeight || 42)
+  return num * (treeConfig?.itemHeight || DefaultItemHeight)
 })
 </script>
 
 <template>
   <view class="qh-tree-item" @touchstart.stop="$emit('toggleExpanded', data)">
-    <view class="qh-tree-item__content" :style="{ height: `${treeConfig?.itemHeight || 42}rpx` }">
+    <view class="qh-tree-item__content" :style="{ height: `${treeConfig?.itemHeight || DefaultItemHeight}rpx` }">
       <view class="qh-tree-item__expand-icon" :class="{ 'is-leaf': isLeaf, 'is-expanded': data.expanded }">
         <image src="../static/arrow.png" />
       </view>

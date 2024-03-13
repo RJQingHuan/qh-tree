@@ -18,3 +18,5 @@ export interface DataTreeOption {
 }
 
 export const QhTreeConfigKey = 'QH_TREE_CONFIG_KEY' as any as InjectionKey<{ itemHeight: number }>
+
+export const DefaultItemHeight = 50

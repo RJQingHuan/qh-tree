@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { provide, ref, watchEffect } from 'vue'
 import QhTreeItem from '../qh-tree-item/qh-tree-item.vue'
-import { QhTreeConfigKey } from './'
+import { DefaultItemHeight, QhTreeConfigKey } from './'
 import type { DataTreeOption, TreeOption } from './'
 
 const props = withDefaults(
@@ -16,7 +16,7 @@ const props = withDefaults(
     labelKey: 'label',
     valueKey: 'value',
     childrenKey: 'children',
-    itemHeight: 50,
+    itemHeight: DefaultItemHeight,
   },
 )
 
