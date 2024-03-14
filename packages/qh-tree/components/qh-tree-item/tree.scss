@@ -10,6 +10,13 @@ $text-size: 30rpx;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding-right: 4rpx;
+    padding-left: 4rpx;
+    border-radius: 4rpx;
+
+    &--hover {
+      background-color: #f5f7fa;
+    }
   }
 
   &__expand-icon {

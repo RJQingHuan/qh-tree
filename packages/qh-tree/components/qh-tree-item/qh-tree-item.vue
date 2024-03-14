@@ -35,7 +35,7 @@ const childrenHeight = computed(() => {
 
 <template>
   <view class="qh-tree-item" @touchstart.stop="$emit('toggleExpanded', data)">
-    <view class="qh-tree-item__content" :style="{ height: `${treeConfig?.itemHeight || DefaultItemHeight}rpx` }">
+    <view class="qh-tree-item__content" hover-class="qh-tree-item__content--hover" :style="{ height: `${treeConfig?.itemHeight || DefaultItemHeight}rpx` }">
       <view class="qh-tree-item__expand-icon" :class="{ 'is-leaf': isLeaf, 'is-expanded': data.expanded }">
         <image src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTM4NCAxOTJ2NjQwbDM4NC0zMjAuMDY0eiIvPjwvc3ZnPg==" />
       </view>

@@ -4,7 +4,8 @@
     "types": [
       "node",
       "vite/client",
-      "@dcloudio/types"
+      "@dcloudio/types",
+      "@uni-helper/uni-app-types"
     ]
   },
   "vueCompilerOptions": {

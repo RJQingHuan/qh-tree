@@ -25,6 +25,7 @@
     "@dcloudio/types": "^3.4.8",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.26",
+    "@uni-helper/uni-app-types": "^0.5.12",
     "@unocss/eslint-config": "^0.58.5",
     "consola": "^3.2.3",
     "eslint": "^8.57.0",
