@@ -14,7 +14,7 @@ $text-size: 30rpx;
 
   &__expand-icon {
     padding-right: 8rpx;
-    color: #a8abb2;
+    font-size: 20rpx;
     transition: transform .4s;
 
     &.is-leaf {
@@ -28,8 +28,8 @@ $text-size: 30rpx;
     }
 
     image {
-      width: 16rpx;
-      height: 21rpx;
+      width: 1em;
+      height: 1em;
     }
   }
 
