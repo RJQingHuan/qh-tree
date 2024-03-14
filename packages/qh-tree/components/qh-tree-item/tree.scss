@@ -1,5 +1,8 @@
 $text-color: #606266;
-$text-size: 30rpx;
+$text-size: 34rpx;
+$checkbox-border-color: #dcdfe6;
+$checkbox-size: 40rpx;
+$checkbox-check-color: #469FFC;
 
 .qh-tree-item {
   width: 100%;
@@ -20,6 +23,8 @@ $text-size: 30rpx;
   }
 
   &__expand-icon {
+    width: 20rpx;
+    height: 20rpx;
     padding-right: 8rpx;
     font-size: 20rpx;
     transition: transform .4s;
@@ -37,6 +42,51 @@ $text-size: 30rpx;
     image {
       width: 1em;
       height: 1em;
+      vertical-align: baseline;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    box-sizing: border-box;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    margin-right: 12rpx;
+    border: 1px solid $checkbox-border-color;
+    border-radius: 8rpx;
+
+    &--check, 
+    &--all {
+      background-color: $checkbox-check-color;
+      border-color: $checkbox-check-color;
+
+      &::before {
+        position: absolute;
+        top: 2rpx;
+        left: 12rpx;
+        width: 9rpx;
+        height: 20rpx;
+        content: " ";
+        border-right: 4rpx solid #fff;
+        border-bottom: 4rpx solid #fff;
+        transform: rotate(45deg);
+      }
+    }
+
+    &--half {
+      background-color: $checkbox-check-color;
+      border-color: $checkbox-check-color;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 4rpx;
+        content: "";
+        background-color: #fff;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 

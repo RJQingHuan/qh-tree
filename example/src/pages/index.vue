@@ -44,10 +44,20 @@ const options = ref<TreeOption[]>([
   { label: '湖南', value: 3 },
   { label: '湖北', value: 4 },
 ])
+
+const treeRef = ref<InstanceType<typeof Tree> | null>(null)
+
+function getCheckedKeys() {
+  // console.log(treeRef?.value.getCheckedNodes(true))
+  // treeRef.value.setChecked([121, 122, 123], true)
+}
 </script>
 
 <template>
   <view class="px-2 pt-2">
-    <Tree :options="options" :accordion="true" />
+    <Tree ref="treeRef" :options="options" :accordion="true" :show-checkbox="false" />
+    <button @click="getCheckedKeys">
+      获取已选中
+    </button>
   </view>
 </template>
