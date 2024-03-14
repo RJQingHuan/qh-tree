@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, inject } from 'vue'
-import { DefaultItemHeight, QhTreeConfigKey } from '../qh-tree'
+import { DefaultItemHeight, QhTreeConfigKey, hasChildren } from '../qh-tree'
 import type { DataTreeOption } from '../qh-tree'
 
 const props = defineProps<{
@@ -22,7 +22,7 @@ const childrenHeight = computed(() => {
   let num = props.data.children.length
   const travel = (options: DataTreeOption[]) => {
     options.forEach((option) => {
-      if (option.expanded && option.children.length) {
+      if (option.expanded && hasChildren(option)) {
         num += option.children.length
         travel(option.children)
       }

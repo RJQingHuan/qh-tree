@@ -5,7 +5,7 @@ import type { TreeOption } from 'qh-tree'
 
 const options = ref<TreeOption[]>([
   {
-    label: '四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川四川',
+    label: '四川',
     value: 1,
     children: [
       { label: '成都', value: 11 },
@@ -18,7 +18,15 @@ const options = ref<TreeOption[]>([
           { label: '江油市', value: 123 },
         ],
       },
-      { label: '广安', value: 13 },
+      {
+        label: '广安',
+        value: 13,
+        children: [
+          { label: '广安区', value: 131 },
+          { label: '前锋区', value: 132 },
+          { label: '华蓥市', value: 133 },
+        ],
+      },
       { label: '宜宾', value: 14 },
     ],
   },
@@ -40,6 +48,6 @@ const options = ref<TreeOption[]>([
 
 <template>
   <view class="px-2 pt-2">
-    <Tree :options="options" />
+    <Tree :options="options" :accordion="true" />
   </view>
 </template>
