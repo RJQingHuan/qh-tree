@@ -88,13 +88,13 @@ provide(QhTreeConfigKey, {
   toggleSelected,
 })
 
-function getCheckedKeys(leafOnly = false) {
-  const result: TreeValue[] = []
+function getCheckedNodes(leafOnly = false) {
+  const result: TreeOption[] = []
 
   const travel = (options: DataTreeOption[]) => {
     options.forEach((option) => {
       if (option.selected === 'check' || (!leafOnly && option.selected === 'all'))
-        result.push(option.value)
+        result.push(option)
       if (!option.leaf && option.selected !== 'none')
         travel(option.children)
     })
@@ -104,22 +104,8 @@ function getCheckedKeys(leafOnly = false) {
   return result
 }
 
-function getCheckedNodes(leafOnly = false) {
-  const result: TreeOption[] = []
-
-  if (props.showCheckbox) {
-    const values = getCheckedKeys(leafOnly)
-    const travel = (options: TreeOption[]) => {
-      options.forEach((option) => {
-        if (values.includes(option[props.valueKey]))
-          result.push(option)
-        if (option[props.childrenKey] && !option.leaf)
-          travel(option[props.childrenKey])
-      })
-    }
-    travel(props.options)
-  }
-  return result
+function getCheckedKeys(leafOnly = false) {
+  return getCheckedNodes(leafOnly).map(data => data[props.valueKey])
 }
 
 function setChecked(values: TreeValue[], checked: boolean) {
@@ -140,18 +126,6 @@ function setChecked(values: TreeValue[], checked: boolean) {
   }
 
   travel(data.value)
-
-  // data.value.forEach((option) => {
-  //   if (values.includes(option.value)) {
-  //     if (option.leaf)
-  //       option.selected = checked ? 'check' : 'none'
-  //     else
-  //       option.selected = checked ? 'all' : 'none'
-  //   }
-  //   else if (hasChildren(option) && !option.leaf) {
-  //     setChecked(values, checked)
-  //   }
-  // })
 }
 
 defineExpose({
